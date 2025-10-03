@@ -23,9 +23,7 @@ public class ThingList {
     }
   }
 
-  // advance one round for every Thing:
-  // 1) let each decide turning (polymorphic)
-  // 2) step forward
+  // move all dots: maybeTurn (poly) + step
   public void moveAll(Random rand) {
     for (Node cur = head; cur != null; cur = cur.next) {
       cur.data.maybeTurn(rand);
